@@ -77,28 +77,25 @@ public class StudentService {
 
     // Grade Based on User Marks
 
-    public char grade(Student student){
+    public char grade(Student student) {
         int marks[] = student.getMarks();
-        if(marks == null || marks.length == 0){
+        if (marks == null || marks.length == 0) {
             return 'F';
         }
         int total = calculateTotal(student);
-        int average = (int)calculateAverage(student);
-        if(average >= 90){
+        int average = (int) calculateAverage(student);
+        if (average >= 90) {
             return 'A';
-        }
-        else if(average >= 70) {
+        } else if (average >= 70) {
             return 'B';
-        }
-        else if(average >= 55){
+        } else if (average >= 55) {
             return 'C';
-        }
-        else if(average >= 40){
+        } else if (average >= 40) {
             return 'D';
-        }
-        else{
+        } else {
             return 'F';
         }
+    }
 
         // pass or Fail
         public String passOrFail(Student student){
@@ -127,4 +124,3 @@ public class StudentService {
             System.out.println("Result : " + passOrFail(student));
         }
     }
-}
