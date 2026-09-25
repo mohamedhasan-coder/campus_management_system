@@ -4,7 +4,6 @@ public class ScholarshipStudent extends Student {
 
     private double scholarshipPercentage;
 
-    // Constructor
     public ScholarshipStudent(int studentid,
                               String studentname,
                               int age,
@@ -30,11 +29,17 @@ public class ScholarshipStudent extends Student {
     // Implement abstract method
     @Override
     public void studentType() {
+        System.out.println("Scholarship Student");
+    }
 
-        System.out.println("Student Type: Scholarship Student");
-        System.out.println(
-                "Scholarship Percentage: "
-                        + scholarshipPercentage + "%"
-        );
+    @Override
+    public void displayStudentInfo(){
+        super.displayStudentInfo();
+        System.out.println("Schorlarship Percentage: " + scholarshipPercentage);
+    }
+
+    @override
+    public void displayStudentInfo(boolean showMarks){
+        super.displatStudentInfo(showMarks);
     }
 }
